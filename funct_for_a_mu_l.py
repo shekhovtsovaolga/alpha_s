@@ -174,7 +174,7 @@ def funct_alpha(s, alpha_order=0,  lambda1=0.3, fixed_3=False, nf_low_3=False):
 # Function R_f(s), last Equation from p.1
 def funct_r_f(m_f, q_f, s, alpha_order=0, lambda1=0.3,fixed_3=False, nf_low_3=False, a=0.2):
     return 3.*q_f**2*funct_t(m_f, s)*(funct_s(m_f, s, a) +
-                             A_l(s, lambda1,n_f(s,fixed_3,nf_low_3)) * funct_g(m_f, s) -
+                             A_l(s, lambda1,n_f(s,fixed_3,nf_low_3))[0] * funct_g(m_f, s) -
                              funct_x(m_f, s, a)/2. )
     
 def funct_r(s, alpha_order=0, lambda1=0.3, fixed_3=False, nf_low_3=False, a=0.2):
